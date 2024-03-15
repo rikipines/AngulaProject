@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .nav-buttons {
+    display: flex;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #00CED1; /* טורקיז מיוחד */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #008B8B; /* שינוי בהבהבות עם העטפה */
+  }
+  

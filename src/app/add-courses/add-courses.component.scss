@@ -1,0 +1,66 @@
+.container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-group > .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #00CED1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #008B8B;
+  }
+  

@@ -1,0 +1,89 @@
+.container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    width: 300px; /* הוספתי רוחב קבוע של 300 פיקסלים */
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-group > .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #00CED1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #008B8B;
+  }
+  
+// .login-container {
+//   width: 300px;
+//   margin: 0 auto;
+//   padding: 20px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   background-color: #fff;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+// }
+
+// .login-form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .input-field {
+//   margin-bottom: 20px;
+// }
+
+// button {
+//   align-self: center;
+// }

@@ -1,0 +1,23 @@
+<div class="container">
+  <label>Filter by Category:</label>
+    <select (change)="onCategoryChange($event)" >
+    <option *ngFor="let category of categoryList"  [value]="category.id">
+      {{category.name}}</option>
+  </select>
+</div>
+
+<div class="row">
+  <div class="col-md-4 mb-4" *ngFor="let c of coursesList; let i = index">
+      <ng-container  *ngIf="(selectedCategoryId==-1||c.categoryId==selectedCategoryId)">
+    <div class="card" style="background-color: #00CED1; color: black;">
+      <div class="card-img-top">
+        <img src="{{c.image}}" alt="Course Image">
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">{{c.name}}</h2>
+        <button [disabled]="!isConnect" (click)="details(c)" class="btn btn-primary">Details</button>
+      </div>
+    </div></ng-container>
+  </div>
+</div>
+

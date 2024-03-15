@@ -1,0 +1,68 @@
+<h2></h2>
+<form [formGroup]="EditForm">
+    <div>
+        <label>name:</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label>numOfLessons:</label>
+        <input type=number formControlName="lessonsAmount">
+    </div>
+    
+        <div class="form-group">
+            <ul formArrayName="syllibus">
+              <li *ngFor="let item of syllibus.controls; let i = index">
+                <input type="text" formControlName="{{i}}" name="silabusItem{{i}}" class="form-control" required>
+                <button type="button" class="btn btn-danger" (click)="removeSilabusItem(i)">delete</button>
+              </li>
+            </ul>
+        <button type="button" class="btn btn-primary" (click)="addSilabusItem()"> Add syllibus</button>
+      </div>
+    <!-- <div>
+        <label>CategoryId:</label>
+        <input type=number formControlName="CategoryId">
+    </div> -->
+    <!-- <label for="courseCategory">category:</label>
+    <select formControlName="categoryId" required>
+       <div *ngFor="let c of categoryList">
+           <div> 
+               <option value="text">{{c.name}}</option>
+           </div>
+       </div>-->
+
+   <!-- </select>   -->
+   <label for="courseCategory">category:</label>
+<select formControlName="categoryId" required>
+  <option *ngFor="let c of categoryList" [value]="c.id">{{c.name}}</option>
+  <!-- <option *ngFor="let category of categoryList"  [value]="category.id">
+ 
+    {{category.name}}</option> -->
+</select>
+    <div>
+        <label>DateStart:</label>
+        <input type=date formControlName="dateOfStart">
+    </div>
+    <div>
+        <label>LecturedId:</label>
+        
+        <input type=select formControlName="lecturerId">
+    </div>
+    <div>
+        <!-- <label>optinOfLearning:</label>
+        <input type=enum formControlName="way_Of_Learning"> -->
+
+        <label for="optinOfLearning">optinOfLearning:</label>
+        <select formControlName="way_Of_Learning" required>
+          <option *ngFor="let o of optinOfLearning" [value]="o">{{o}}</option>
+        </select>
+    </div>
+    <div>
+        <label>img:</label>
+        <input type="type" formControlName="image">
+    </div>
+    <button  (click)="onsubmit()">Edit-Course</button>
+
+</form>
+
+
+  

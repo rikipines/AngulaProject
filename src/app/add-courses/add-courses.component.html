@@ -1,0 +1,45 @@
+
+   <div class="container">
+    <h2>Add New Course</h2>
+    <form [formGroup]="AddForm" class="mt-4">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="numOfLessons">Number of Lessons:</label>
+        <input type="number" id="numOfLessons" class="form-control" formControlName="lessonsAmount">
+      </div>
+      <div class="form-group">
+        <label for="wayOfLearning">Way of Learning:</label>
+        <ul formArrayName="syllibus">
+          <li *ngFor="let item of syllibus.controls; let i = index">
+            <input type="text" formControlName="{{i}}" name="syllibusItem{{i}}" class="form-control" required>
+            <button id="3" type="button" class="btn btn-danger" (click)="removeSilabusItem(i)">Delete</button>
+          </li>
+        </ul>
+        <button id="2" type="button" class="btn btn-primary" (click)="addSilabusItem()">Add Syllibus</button>
+      </div>
+      
+      <div class="form-group">
+        <label for="dateStart">Date Start:</label>
+        <input type="date" id="dateStart" class="form-control" formControlName="dateOfStart">
+      </div>
+      <div class="form-group">
+        <label for="lecturerId">Lecturer ID:</label>
+        <input type="select" id="lecturerId" class="form-control" formControlName="lecturerId">
+      </div>
+      <div class="form-group">
+        <label for="optinOfLearning">Option of Learning:</label>
+        <input type="enum" id="optinOfLearning" class="form-control" formControlName="way_Of_Learning">
+      </div>
+      <div class="form-group">
+        <label for="img">Image:</label>
+        <input type="text" id="image" class="form-control" formControlName="image">
+      </div>
+      <div class="button-group">
+        <button (click)="submit()"type="button" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,21 @@
+<div class="loginLecturer-container">
+    <h2>Login Lecturer</h2>
+    <form [formGroup]="LoginLecturerForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name" id="name">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" formControlName="password" id="password">
+      </div>
+      <div class="form-group">
+        <label for="course">course:</label>
+        <input type="course" formControlName="course" id="course">
+      </div>
+      <div>
+      <button type="button" (click)="lacturer()">Login Lecturer</button>
+        
+      </div>
+    </form>
+  </div>

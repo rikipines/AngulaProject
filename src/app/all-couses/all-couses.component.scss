@@ -1,0 +1,56 @@
+.card {
+    width: 40vh; /* 3 cards in a row with some margin */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Removed padding to adjust for image placement */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    color: #333;
+  }
+  
+  .card-img-top img {
+    width: 100%; /* Make image fill its container */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #00CED1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #008B8B;
+  }
+  
+  .btn-primary {
+    background-color: #008080; /* טורקיז */
+    border-color: #008080; /* טורקיז */
+  }
+  
+  .btn-primary:hover {
+    background-color: #00CED1; /* #00CED1 */
+    border-color: #00CED1; /* #00CED1 */
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 206, 209, 0.5); /* טורקיז */
+  }
+  

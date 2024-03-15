@@ -1,0 +1,54 @@
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Add New User</h2>
+        <form [formGroup]="SigninForm" class="mt-4">
+          <div class="form-group">
+            <label for="name">Name <i class="bi bi-person"></i>:</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <i class="bi bi-envelope"></i>:</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password <i class="bi bi-lock"></i>:</label>
+            <input type="password" id="password" class="form-control" formControlName="password">
+          </div>
+          <div class="form-group">
+            <label for="address">Address <i class="bi bi-house-door"></i>:</label>
+            <input type="text" id="address" class="form-control" formControlName="address">
+          </div>
+          <button type="button" class="btn btn-primary"><i class="bi bi-person-plus"></i> Add User</button>
+        </form>
+      </div>
+    </div>
+  </div>
+   -->
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 login-container">
+        <h2>Add New User</h2>
+        <form [formGroup]="SigninForm" class="mt-4">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" formControlName="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="form-control" formControlName="password">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" class="form-control" formControlName="address">
+          </div>
+          <button (click)="getNewUsers()" type="button" class="btn btn-primary">Add User</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
