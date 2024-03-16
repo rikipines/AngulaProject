@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { SigninComponent } from '../signin/signin.component';
-import { AllCousesComponent } from '../all-couses/all-couses.component';
 import { Router } from '@angular/router';
 import { users } from '../user.model';
 
@@ -9,7 +8,6 @@ import { users } from '../user.model';
   selector: 'app-navbar',
   standalone: true,
   imports: [LoginComponent,SigninComponent,NavbarComponent],
-  // AllCousesComponent,
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -33,16 +31,12 @@ export class NavbarComponent {
   }
 
   logOut(){
-    sessionStorage.setItem('user', JSON.stringify(new users()))
-    console.log(sessionStorage.getItem('user'))
+    sessionStorage.setItem('user', JSON.stringify(new users())) 
+     sessionStorage.setItem('lecture', JSON.stringify({}));
+    sessionStorage.setItem('lectur', JSON.stringify({}));
     this.router.navigate(['/login'])
     }
     EditCours(){
       this.router.navigate(['/edit-Course'])
     }
-
-  // toDeleteCustomer(){
-  //   this.router.navigate(['/delete-customer'])
-  // }
-
 }

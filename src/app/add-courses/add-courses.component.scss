@@ -63,4 +63,13 @@
   button:hover {
     background-color: #008B8B;
   }
-  
+  #img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('https://odesign.co.il/wp-content/uploads/2021/11/37.jpg') center center no-repeat;
+    background-size: cover;
+}

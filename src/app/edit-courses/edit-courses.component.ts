@@ -34,16 +34,12 @@ export class EditCoursesComponent {
           this.course = this.coursesList.filter(x => x.id.toString() == param['id'])[0];
           this.initForm();
         })
-      }
-      
+      }     
     })
     
     this._category.getCategoryDetails().subscribe({
-
       next: (res) => {
-
         this.categoryList = res
-
       },
       error: (err) => {
         console.log(err);
@@ -53,8 +49,7 @@ export class EditCoursesComponent {
       }
     })
      if (this.EditForm.valid) 
-      this.course = this.EditForm.value;
-       
+      this.course = this.EditForm.value;      
   }
   initForm() {
     this.EditForm = new FormGroup({
@@ -71,7 +66,7 @@ export class EditCoursesComponent {
   }
 
   onsubmit() {
-     this.course = this.EditForm.value;
+    this.course = this.EditForm.value;
     this._editService.updatCours(this.course.id, this.course).subscribe({
       next: (res) => {
         Swal.fire({
@@ -80,7 +75,6 @@ export class EditCoursesComponent {
           text: 'course exist in our site.'
         });
         this.router.navigate(["/courses"])
-
         console.log(res)
       },
       error: (err) => {
@@ -88,17 +82,8 @@ export class EditCoursesComponent {
       },
       complete: () => {
         console.log('finish');
-
-
       }
-    })
-
-
-
-
-
-
-    
+    }) 
   };
 
   get syllibus() {
@@ -112,9 +97,4 @@ export class EditCoursesComponent {
   removeSilabusItem(index: number) {
     this.syllibus.removeAt(index);
   }
-
-
-
 }
-
-

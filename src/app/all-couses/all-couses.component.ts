@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { courses } from '../courses.model';
 import { coursesservice } from '../courses.server';
-import { NgForm, NgModel, ReactiveFormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 import { users } from '../user.model';
 import { categoryservice } from '../category.service';
 import { category } from '../category.model';
-
 
 @Component({
   selector: 'app-all-couses',
@@ -16,6 +15,7 @@ import { category } from '../category.model';
   templateUrl: './all-couses.component.html',
   styleUrl: './all-couses.component.scss'
 })
+
 export class AllCousesComponent implements OnInit {
   temp: string | null = null;
   public selectedCourses!: courses;
@@ -57,6 +57,7 @@ export class AllCousesComponent implements OnInit {
       }
     })
   }
+
   details(c: courses) {
     this.selectedCourses = c
     this.router.navigate(["/CoursesDetailes", c.id])
@@ -65,10 +66,10 @@ export class AllCousesComponent implements OnInit {
   toShow() {
     this.temp = sessionStorage.getItem('user');
     this.temp1 = sessionStorage.getItem('lectur');
-
     if (this.temp != JSON.stringify(new users())||this.temp1!= JSON.stringify(new users()))
       this.isConnect = true
   }
+
   onCategoryChange(event: any) {
     this.selectedCategoryId = event.target.value;
   }

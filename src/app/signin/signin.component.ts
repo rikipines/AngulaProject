@@ -6,12 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 
-
 @Component({
-
-
-
-
   selector: 'app-signin',
   standalone: true,
   imports: [ReactiveFormsModule, ReactiveFormsModule],
@@ -34,7 +29,6 @@ export class SigninComponent implements OnInit{
 ngOnInit(): void {
   this.setName();
   this.SigninForm = new FormGroup({
-    
     'name': new FormControl(this.nameFromLogin,[Validators.required, Validators.minLength(3)]),
     'password': new FormControl( "",Validators.required),
     'address':new FormControl("",Validators.required),
@@ -45,26 +39,17 @@ ngOnInit(): void {
 public setName(){
   this.router.params.subscribe((param) => {
     this.nameFromLogin = param['name'];
-
 })
 }
 
 public getNewUsers(){
-
  if (this.SigninForm.valid) {
   this.user.id=0;
     this.user.name = this.SigninForm.get('name')?.value;
     this.user.password= this.SigninForm.get('password')?.value;
     this.user.Email = this.SigninForm.get('email')?.value;
     this.user.Address = this.SigninForm.get('address')?.value;
-    console.log("name",this.user.name)
-    console.log("pass", this.user.password)
-    console.log("Email", this.user.Email)
-    console.log("Adress",this.user.Address)
-
-
  this._UserServise.AddUser(this.user).subscribe({
-
   next: (res) => {
     console.log(res);
     Swal.fire({
@@ -74,7 +59,6 @@ public getNewUsers(){
     });
     sessionStorage.setItem('user', JSON.stringify(this.user))
     this.router1.navigate(["/courses"]);
-    
   },
   error: (err) => {
     console.log(err);

@@ -1,0 +1,89 @@
+.loginLecturer-container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    width: 300px; /* הוספתי רוחב קבוע של 300 פיקסלים */
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.loginLecturer-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.loginLecturer-container form {
+    display: grid;
+    gap: 20px;
+}
+
+.loginLecturer-container .form-group {
+    margin-bottom: 15px;
+}
+
+.loginLecturer-container label {
+    margin-bottom: 5px;
+}
+
+.loginLecturer-container input,
+.loginLecturer-container select {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.loginLecturer-container .input-group {
+    position: relative;
+    width: 100%;
+}
+
+.loginLecturer-container .input-group > .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.loginLecturer-container .button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginLecturer-container button {
+    padding: 10px;
+    background-color: #00CED1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginLecturer-container button:hover {
+    background-color: #008B8B;
+}
+
+// .loginLecturer-container #img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: -1;
+//     background: url('https://odesign.co.il/wp-content/uploads/2021/11/37.jpg') center center no-repeat;
+//     background-size: cover;
+// }
+#img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('https://odesign.co.il/wp-content/uploads/2021/11/37.jpg') center center no-repeat;
+    background-size: cover;
+}

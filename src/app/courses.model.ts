@@ -2,7 +2,6 @@ export class courses {
     id!: number
     name!: string
     categoryId:number=-1
-   
     lessonsAmount!:number
     dateOfStart!:Date
     syllibus!:string[]

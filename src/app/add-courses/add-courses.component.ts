@@ -23,54 +23,40 @@ export class AddCoursesComponent implements OnInit {
   public course: courses = new courses();
   constructor(private router: Router, private _categoryService: categoryservice, private _CourseService: coursesservice) {
   }
-
   ngOnInit(): void {
-
     this.AddForm = new FormGroup({
       'id': new FormControl(0, Validators.required),
       'name': new FormControl(" ", [Validators.required, Validators.minLength(2)]),
       // 'password': new FormControl(null, Validators.required),
-      'categoryId': new FormControl("", Validators.required),
+      'categoryId': new FormControl(0, Validators.required),
       'lessonsAmount': new FormControl( "",Validators.required),
       'dateOfStart': new FormControl(null),
       'syllibus': new FormArray([new FormControl('', [Validators.required])]),
       'lecturerId': new FormControl( "",Validators.required),
       'image': new FormControl("", Validators.required),
       'way_Of_Learning': new FormControl( "",Validators.required),
-
-
-
     });
-
-
     if (this.AddForm.valid) {
       this.course = this.AddForm.value;
-
+      this.course.categoryId=0;
     }
-
     this._categoryService.getCategoryDetails().subscribe({
-
       next: (res) => {
         this.categoryList = res
-
-        console.log(res)
       },
       error: (err) => {
         console.log(err);
       },
       complete: () => {
         console.log('finish');
-
-
       }
     })
-
-
   };
 
   get syllibus() {
     return this.AddForm.get('syllibus') as FormArray;
   }
+
   addSilabusItem() {
     this.syllibus.push(new FormControl('', Validators.required));
   }
@@ -79,38 +65,24 @@ export class AddCoursesComponent implements OnInit {
     const silibusFormArray = this.AddForm.get('syllabus') as FormArray;
     silibusFormArray.removeAt(i);
   }
-
-
+  
   submit() {
-
-
-    // if (this.AddForm.valid) {
     this.course = this.AddForm.value;
-    console.log("this.course", this.course )
     this._CourseService.AddCourse(this.course).subscribe({
-
       next: (res) => {
-
         Swal.fire({
           icon: 'success',
           title: 'Course Add!',
           text: 'course exist in our site.'
         });
         this.router.navigate(["/courses"])
-
-        console.log(res)
       },
       error: (err) => {
         console.log(err);
       },
       complete: () => {
         console.log('finish');
-
-
       }
     })
   }
 }
-
-
-

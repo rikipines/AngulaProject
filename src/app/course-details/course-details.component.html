@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h2>Name: {{course?.name}}</h2>
     <h3> categoryId: {{course?.categoryId}}</h3>
     <h3>num of lessons: {{course?.lessonsAmount}}</h3>
@@ -7,6 +7,25 @@
     <h3>lecturerId: {{course?.lecturerId}}</h3> 
     <img src="{{course?.image}}" alt="img">
     <h3>option_of_learninig: {{course?.way_Of_Learning}}</h3>
-    <i class="{{ course?.way_Of_Learning | learningWay }}"></i> <!-- שימוש ב-PIPE כאן -->
+    <i class="{{ course?.way_Of_Learning | learningWay }}"></i> שימוש ב-PIPE כאן
     <button [disabled]="!isConnect"  (click)="update()">Update</button>
-</div>
+</div> -->
+<div class="course-details">
+
+  
+    <h2> {{course?.name}}</h2>
+    <img src="{{course?.image}}" alt="Course Image">
+
+    <h3>Category: {{course?.categoryId}}</h3>
+    <h3>Number of Lessons: {{course?.lessonsAmount}}</h3>
+    <h3 [ngClass]="{'soon':this.isSoon}">Start Date: {{course?.dateOfStart}}</h3> 
+    <h3>Syllabus: {{course?.syllibus}}</h3> 
+    <h3>Lecturer {{course?.lecturerId}}</h3> 
+    <h3>Option of Learning: {{course?.way_Of_Learning}}</h3>
+    <i class="{{ course?.way_Of_Learning | learningWay }}"></i> <!-- Using a PIPE here -->
+    <button (click)="update()"
+    [disabled]="course.lecturerId!=lacturer"
+
+    >Update</button>
+
+</div> 

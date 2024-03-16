@@ -1,6 +1,6 @@
 <div class="container">
-  <label>Filter by Category:</label>
-    <select (change)="onCategoryChange($event)" >
+  <label  class="filter-title">Filter by Category:</label>
+    <select (change)="onCategoryChange($event)"class=" btn btn-primary">
     <option *ngFor="let category of categoryList"  [value]="category.id">
       {{category.name}}</option>
   </select>

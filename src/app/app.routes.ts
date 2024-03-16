@@ -24,7 +24,7 @@ import { EditCoursesComponent } from './edit-courses/edit-courses.component';
     {path:'courses',component:AllCousesComponent},
     {path: 'CoursesDetailes/:id',component:CourseDetailsComponent},
     {path: 'Add-Courses',component:AddCoursesComponent},
-    {path: 'login-Lecturer',component:LoginLecturerComponent},
+    {path: "login-Lecturer/:name",component:LoginLecturerComponent},
     { path: "**", component: NavbarComponent }
 
   ]

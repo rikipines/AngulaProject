@@ -1,3 +1,54 @@
-.soon{
-    font-weight: bolder;
+.course-details {
+    background-color: #000;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    text-align: center; /* למרכז את הטקסט */
+}
+
+.course-details img {
+    width: 100%;
+    height: 300px;
+}
+
+.course-details .text-content {
+    padding-top: 20px; /* מרווח מעל הטקסט */
+}
+
+.course-details h2 {
+    margin-top: 7%;
+    font-size: 24px; /* גודל גופן ל h2 */
+    margin-bottom: 10px; /* מרווח מתחת לטקסט */
+    text-align: center; /* למרכז את הטקסט */
+    background-color:  #00CED1; /* צבע רקע כחום */
+    color: white; /* צבע טקסט לבן */
+    padding: 10px; /* גודל ריפוד */
+    border-radius: 5px; /* רדיוס פינות */
+}
+
+.course-details h3 {
+    font-size: 18px; /* גודל גופן ל h3 */
+    margin-bottom: 15px; /* מרווח מתחת לטקסט */
+    color: #fff; /* צבע לבן */
+    background-color: transparent; /* מסירים רקע */
+}
+
+.course-details button {
+    padding: 10px 20px;
+    background-color: #00CED1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.course-details button:hover {
+    background-color: #008B8B;
 }
